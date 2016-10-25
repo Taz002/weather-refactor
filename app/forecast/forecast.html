@@ -1,0 +1,15 @@
+<h1>This is forecast </h1>
+
+<p>Our city is: {{vm.city}}</p>
+
+<a href="/forecast/7">Weekly Forecast</a>
+
+<div class="container">
+  <div ng-repeat="w in vm.weatherResult.list">
+    <div class="row">
+      <div class="col-md-12">
+        <weather-report weather-day="w" convert-to-standard="vm.convertToFahrenheit(daytimeTemp)" convert-to-date="vm.convertToDate(dt)" date-format="MMMM dd, y"></weather-report>
+      </div>
+    </div>
+  </div>
+</div>
